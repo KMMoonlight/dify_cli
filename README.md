@@ -9,3 +9,6 @@
 
 > dify 适合对话式
 > difyc 适合文本生成 翻译等
+
+
+![dify](./dify.gif)
