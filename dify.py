@@ -63,9 +63,9 @@ def send_chat_message(msg, conversation_id, type):
 def chat_loop(conversation_id, type):
     while True:
         if type == 'chat':
-            msg = input("Any Question: ")
+            msg = input("有什么可以帮助你的吗: ")
         else:
-            msg = input("Any Message: ")    
+            msg = input("有什么内容需要生成: ")    
         if msg == ":exit" or msg == ":quit" or msg == ":q":
             sys.exit(0)
         chat_loop(send_chat_message(msg, conversation_id, type), type)
