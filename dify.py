@@ -39,6 +39,10 @@ def send_chat_message(msg, conversation_id, user):
             data = json.loads(decoded_line)
             conversation_id = data["conversation_id"]
             cursor_format_output(data["answer"])
+            
+    print("\n")
+    print("=====================================================================================================")
+    print("\n")
 
     return conversation_id
 
@@ -49,7 +53,6 @@ def chat_loop(conversation_id):
         if msg == ":exit" or msg == ":quit" or msg == ":q":
             sys.exit(0)
         chat_loop(send_chat_message(msg, conversation_id, "qjh123"))
-        print("\n")
 
 
 if __name__ == "__main__":
